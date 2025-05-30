@@ -30,6 +30,7 @@ jobs:
 
 
   test2:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -49,6 +50,7 @@ jobs:
         run: npm test
 
   test3:
+    needs: test2
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -68,7 +70,7 @@ jobs:
         run: npm test
 
   build:
-    needs: [test, test2, test3]
+    needs: test3
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
