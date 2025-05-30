@@ -5,5 +5,8 @@ import { PrismaService } from './database/prisma/prisma.service';
 export class AppService {
   constructor(private readonly prisma: PrismaService) {}
 
+  get() {
+    return "Hello comgratulation this is final thest"
+  }
 
 }
