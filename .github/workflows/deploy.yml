@@ -68,7 +68,7 @@ jobs:
         run: npm test
 
   build:
-    needs: test
+    needs: [test, test2, test3]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
