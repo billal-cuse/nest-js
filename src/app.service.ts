@@ -6,7 +6,7 @@ export class AppService {
   constructor(private readonly prisma: PrismaService) {}
 
   get() {
-    return "Hello comgratulation this is final thest"
+    return "Hello comgratulation this is final test"
   }
 
 }
